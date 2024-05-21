@@ -5,15 +5,12 @@ use App\Http\Controllers\AuthController;
 
 
 // loginandregisteration-----------------------------------------------------------------------------
-Route::get('/login', [AuthController::class, 'login'])->name('login');
-Route::get('/register', [AuthController::class, 'register'])->name('register');
-Route::post('/login', [AuthController::class, 'loginPost'])->name('login_post');
-Route::post('/register', [AuthController::class, 'registrationPost'])->name('register_post');
-Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
-// endlogin----------------------------------------------------------------------------------------------
 
+Route::post('/api/login', [AuthController::class, 'loginPost'])->name('login_post');
+Route::post('/api/register', [AuthController::class, 'registrationPost'])->name('register_post');
+Route::post('/api/logout', [AuthController::class, 'logout'])->name('logout');
 
-
+// endlogin-------------------------------------------------------------------------------------------
 Route::get('/', function () {
     return view('welcome');
 });
@@ -29,6 +26,7 @@ Route::get('/home', function () {
 Route::get('/contact', function () {
     return view('contact');
 })->name('contact');
+
 /////////////////Eventss/////////////////////////////////////////////////////////////////////////////============================================
 Route::get('/anniversary_in', function () {
     return view('anniversaryindoor');
