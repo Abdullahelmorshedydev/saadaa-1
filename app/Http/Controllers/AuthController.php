@@ -58,3 +58,13 @@ class AuthController extends Controller
         return response()->json(['message' => 'Successfully logged out'], 200);
     }
 }
+// ?kkkcn
+
+// kneckk
+// ekmked
+
+
+
+
+
+// slmsx.lx 
